@@ -1,0 +1,15 @@
+*.aux
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.loa
+*.lof
+*.log
+*.lol
+*.lot
+*.out
+*.pdf
+*.tdo
+*.toc

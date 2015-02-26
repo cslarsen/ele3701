@@ -1,0 +1,153 @@
+% Enable UTF-8 text
+\usepackage[utf8]{inputenc} % enable UTF-8 text
+
+% Adds bibliography to table of contents
+\usepackage[nottoc]{tocbibind}
+
+% Automatically collect used acronyms
+\usepackage[printonlyused,withpage]{acronym}
+%
+% Automatically add acronyms to index, see
+% http://tex.stackexchange.com/questions/22570/automatically-index-acronyms
+%
+% I have turned these off temporarily, because it gave pretty strange
+% results.
+%
+%   \let\oldac\ac
+%   \renewcommand*{\ac}[1]{\oldac{#1}\index{#1}}
+%
+% (Could also use the nomencl package here, which supports it)
+
+% Use newlines in paragraph instead of indentation
+\usepackage{parskip}
+
+% Adds the TODO package
+\usepackage[backgroundcolor=white,linecolor=red,bordercolor=red]{todonotes}
+
+% Build index, using the new imakeidx in TeX Live, see
+% http://tex.blogoverflow.com/2012/09/dont-forget-to-run-makeindex/
+\usepackage{imakeidx}
+\makeindex
+
+% Uncomment this if you want to show all \index{} locations in the document
+% in the margins (good for proofreading)
+%\usepackage{showidx}
+
+% Hyperlinks, clickable references
+% Hidelinks turns off colored box on some PDF viewers
+\usepackage[hidelinks]{hyperref}
+
+% On Mac OSX, in ViM, when I type ALT+SHIFT+SPACE (often typed accidentally
+% after writing {\some-command ...}, then LaTeX may give me the error
+% "Unicode char \u8:  not set up for use with LaTeX.".  This character
+% in UTF-8 actually means what the tilde (~) means in LaTeX, but *I*
+% usually mean just a space.  This command replaces those with a
+% normal space:
+\DeclareUnicodeCharacter{00A0}{ }
+% If I really want the tilde-behaviour, I can use the command
+%\DeclareUnicodeCharacter{00A0}{~}
+%
+% The above solution was taken from:
+% http://tex.stackexchange.com/questions/83440/inputenc-error-unicode-char-u8-not-set-up-for-use-with-latex
+
+% Package for writing algorithms
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode} % noend -> no "end if" etc.
+
+% Custom \On ... \EndOn block
+\algnewcommand\algorithmicon{\textbf{on}}
+\algnewcommand\algorithmicfrom{\textbf{from}}
+\algblockdefx[ON]{On}{EndOn}[2]
+  {\algorithmicon\ #1\ \algorithmicfrom\ #2\ \algorithmicdo}
+  {\algorithmicend\ \algorithmicon}
+%
+% Blank end of block when using [noend] option
+\makeatletter
+\ifthenelse{\equal{\ALG@noend}{t}}%
+  {\algtext*{EndOn}}
+  {}%
+\makeatother
+
+% Custom \ForIn ... \EndForIn block
+\algnewcommand\algorithmicforin{\textbf{for}}
+\algnewcommand\algorithmicin{\textbf{in}}
+\algblockdefx[FORIN]{ForIn}{EndForIn}[2]
+  {\algorithmicforin\ #1\ \algorithmicin\ #2\ \algorithmicdo}
+  {\algorithmicend\ \algorithmicforin}
+%
+% Blank end of block when using [noend] option
+\makeatletter
+\ifthenelse{\equal{\ALG@noend}{t}}%
+  {\algtext*{EndForIn}}
+  {}%
+\makeatother
+
+% A sendto command
+\newcommand{\SendTo}[2]
+  {\textbf{send}\ #1\ \textbf{to}\ #2}
+
+\usepackage{amsmath} % for \text{}
+
+% Better verbatim package
+\usepackage{fancyvrb}
+
+% For drawing
+\usepackage{tikz}
+
+% Above/below refs
+\usepackage{varioref}
+
+% Cells spanning vertically
+\usepackage{multirow}
+
+% For program listings
+\usepackage{listings}
+% Make program listings look like verbatim:
+% See http://tex.stackexchange.com/questions/172702/how-can-i-make-lstlisting-look-exactly-like-verbatim?noredirect=1#172704
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  keepspaces=true,
+}
+
+\usetikzlibrary{chains, scopes}
+
+% Figures side-by-side
+\usepackage{subcaption}
+
+% Used in figures
+\definecolor{verylight}{gray}{0.92}
+
+% Hein's space time package for network flows
+\usepackage{local-packages/spacetime}
+
+% Nice units
+\usepackage{SIunits}
+\newcommand\ms[1]{#1~\milli\second}
+
+
+% If statements ...
+\usepackage{ifthen}
+
+% Colors in tables
+\usepackage{array} % to control cellspacing, see http://tex.stackexchange.com/questions/98110/white-space-between-columns-using-rowcolorsomecolor
+\usepackage{xcolor,colortbl}
+
+% Capitalize command
+\makeatletter
+\newcommand{\Capitalize}[1]{%
+  \edef\@tempa{\expandafter\@gobble\string#1}%
+  \edef\@tempb{\expandafter\@car\@tempa\@nil}%
+  \edef\@tempa{\expandafter\@cdr\@tempa\@nil}%
+  \uppercase\expandafter{\expandafter\def\expandafter\@tempb\expandafter{\@tempb}}%
+  \@namedef{\@tempb\@tempa}{\expandafter\MakeUppercase\expandafter{#1}}}
+\makeatother
+
+% ceil and floor
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% to include pdf files
+\usepackage{pdfpages}
