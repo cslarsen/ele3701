@@ -21,8 +21,8 @@ open: all
 
 # index
 %.ilg %.ind: %.idx
-	#$(MAKEINDEX) ${<:.idx=}
-	# Not needed with imakeidx package in TeX Live
+	@# $(MAKEINDEX) ${<:.idx=}
+	@# Not needed with imakeidx package in TeX Live
 
 # bibliography
 %.bbl %.blg: %.aux
