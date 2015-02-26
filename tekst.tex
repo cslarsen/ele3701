@@ -1,1 +1,102 @@
+\chapter{Forretningsidéen}
+
+\section{Tynnklient}
+Noen problemer med dagens smarttelefoner er at de er \textit{kostbare å
+produsere}, de er \textit{dyre for kundene}, de har \textit{lav batteritid}
+og produsentene sliter med å lage dem \textit{tynnere og lettere}. Et annet
+problem er ved tyveri; data lagres ikke automatisk på nett, og kan dermed gå
+tapt eller komme på avveier.
+
+Alt dette koker ned til at alle eksisterende smarttelefoner på markedet er \textit{tykke
+klienter}. En tykk klient betyr at alle oppgavene utføres av en mikroprosessor
+på selve mobiltelefonen. Den trenger da lokal lagring og minne. 
+
+Det motsatte av dette er \textit{tynnklienter} --- her er selve enheten et
+relativt dumt grensesnitt mot en nettverkstjener. Tenk en PC som mottar bilde
+og lyd i sin helhet fra en tjener. Alle tastetrykk og musebevegelser sendes til
+tjeneren, og tjeneren er den \textit{egentlige} PC-en.
+
+En \textit{tynnklientmobil} vil dermed være en mobiltelefon som er svært simpel
+komponentmessig, men som i prinsippet kan være grensesnittet mot en kraftig
+superdatamaskin, om man så ønsker det. Av dette får man umiddelbare fordeler:
+
+Istedenfor å kjøpe nye mobiltelefoner kan man bare kjøpe raskere tjenester i
+skyen. Videoredigering er enkelt, man oppskalerer jobber etter det man trenger.
+
+\begin{itemize}
+  \item All data ligger lagret på en remote server. Mobiltelefonen inneholder
+  KUN en UUID og et passord i minne. Ved tyveri er mobilen VERDILØS. Faktisk så
+  verdiløs at det er TOTALT unødvendig å stjele en; man MÅ ha abonnement for å
+  kunne bruke den, dermed er tyveri eliminert.
+
+  \item Det blir ingen mer oppgradering, det skjer automatisk på serveren.
+
+  \item Ved tyveri eller tap kan man bare få en ny mobil og fortsette der
+  man slapp. Alle apper, alt man jobbet med, ligger der fremdeles.
+
+  \item Krever minimalt med komponenter: Kun AD/DA konverter, display,
+  minimalt med minne, mic, høyttaler, GSM+radio, evt et kamera. Krever en del
+  mer da, for den trenger jo komprimering av bilde data og sånt. Derfor driter
+  vi i kamera foreløpig. Mindre komponenter betyr tynnere mobil og billigere å
+  produsere.
+
+\end{itemize}
+
+Ulemper: Skape et økosystem, vanskelig å konkurrere med apple og samsung.etc
+
+\section{Abonnementstjeneste}
+
+Den ekte inntekten ligger i abonnementtjenestene. Selve mobiltelefonen bør være
+subsidiert så mye at den i praksis er gratis for kunden. Ved at kunden har all
+data i skyen blir det høy <<lock-in>>, og man vil da tjene penger på
+abonnementet. Vi ser for oss at produktet selges med innebakt mobilabonnement,
+dvs at SIM-kort allerede er installert, og man slipper å opprette avtale med
+hverken Telenor eller noe som helst. Det ordner vi. Hvorfor? For å gjøre det
+enkelt.
+
+Når man ringer til telefonen, så gjør det via Asterix og SIP. Dvs tjeneren
+mottar/starter opp samtale, router til mobilenhet via datatrafikk over nett.
+
+Apper må kjøpes utover abonnementet. Abonnementet bør dekke en god del apps og
+tjenester. 
+
+\section{Fri data, over hele verden}
+
+Som TomTom, får avtale med produsenter. Dette er for å differensiere oss fra
+andre produsenter.
+
+% - forklare idéen og konseptet
+% - forklare HVORFOR det er en god idé
+
+\chapter{Forretningsplan}
+
+I denne skissen har vi valgt å bruke <<the business model canvas>>
+\cite{oswalder} som utgangspunkt for en full forretningsmodell.
+
+Den består av følgende punkter:
+
+\begin{itemize}
+  \item Nøkkelpartnere
+  \item Nøkkelaktiviteter
+  \item Nøkkelressurser
+  \item Verdiforslag (<<value propositions>>)
+  \item Kundeforhold
+  \item Kundesegment
+  \item Salgskanaler
+  \item Kostnadsstruktur
+  \item Inntektsstrømmer
+\end{itemize}
+
+\chapter{Utførelse}
+
+
+% Datainnsamling
+% - Markedsdata (markedsstørrelse, low-mid end)
+% - Demografiske data, inntektsgrupper osv, spredning
+% - Priser for deler og komponenter, priser for oppskalert produksjon
+% - Ha et realistisk forhold til produksjonskostnader
+% - Utviklingskostnader, må da se på hvilke hovedfaser som må gjøres
+% Kontakte feks Telenor Group Innovasjon
+% Kontakte Innovasjon Norge
+
 \cite{bessant}.
