@@ -1,3 +1,21 @@
+% Norwegian
+\usepackage[norsk]{babel}
+
+% Latin1 Times Roman font for Norwegian
+\usepackage{times}
+\usepackage[T1]{fontenc}
+%\usepackage[Latin1]{inputenc}
+
+% Bibliography in table of contents
+\usepackage[nottoc]{tocbibind} 
+
+% Norwegian "tankestrek"
+\newcommand{\strek}{\textthreequartersemdash}
+
+% Norwegian 1.5 linespacing
+\usepackage{setspace}
+\onehalfspacing
+
 % Enable UTF-8 text
 \usepackage[utf8]{inputenc} % enable UTF-8 text
 
@@ -20,9 +38,6 @@
 
 % Use newlines in paragraph instead of indentation
 \usepackage{parskip}
-
-% Adds the TODO package
-\usepackage[backgroundcolor=white,linecolor=red,bordercolor=red]{todonotes}
 
 % Build index, using the new imakeidx in TeX Live, see
 % http://tex.blogoverflow.com/2012/09/dont-forget-to-run-makeindex/
@@ -119,13 +134,9 @@
 % Used in figures
 \definecolor{verylight}{gray}{0.92}
 
-% Hein's space time package for network flows
-\usepackage{local-packages/spacetime}
-
 % Nice units
 \usepackage{SIunits}
 \newcommand\ms[1]{#1~\milli\second}
-
 
 % If statements ...
 \usepackage{ifthen}

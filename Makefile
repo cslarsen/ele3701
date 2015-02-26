@@ -8,7 +8,12 @@ BIBTEX := bibtex
 # List all targets that are not actual files
 .PHONY: data-all all default benchmarks full sign open check
 
-default: $(TARGETS)
+default: open
+
+all: $(TARGETS)
+
+open: all
+	open skisse.pdf
 
 # first parse
 %.aux %.idx %.log %.out %.toc: %.tex
@@ -56,17 +61,22 @@ check-dash:
 
 check-footnote:
 	@echo "## Footnotes should preferably be after punctuation"
-	@grep -RI '[a-zA-Z]\\footnote' *.tex || exit 0
+	@grep -RI '[a-zA-Z]\\\\footnote' *.tex || exit 0
 	@echo ""
 
 check-em:
 	@echo '## Should use \textit instead of \em'
-	@grep -RI '\\em ' *.tex || exit 0
+	@grep -RI '\\em' *.tex || exit 0
 	@echo ""
 
 check-todo:
 	@echo "## To do ..."
-	@grep -RI -i todo *.tex || exit 0
+	@grep -RI -i todo *.tex || exit 0
+	@echo ""
+
+check-label:
+	@echo "## Checking for incorrect order of caption/label"
+	@./grep_incorrect_labels.py `find . -name '*.tex'`
 	@echo ""
 
 clean:
