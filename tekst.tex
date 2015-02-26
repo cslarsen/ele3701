@@ -1,74 +1,35 @@
-\chapter{Forretningsidéen}
+\section*{Innledning}
 
-\section{Tynnklient}
-Noen problemer med dagens smarttelefoner er at de er \textit{kostbare å
-produsere}, de er \textit{dyre for kundene}, de har \textit{lav batteritid}
-og produsentene sliter med å lage dem \textit{tynnere og lettere}. Et annet
-problem er ved tyveri; data lagres ikke automatisk på nett, og kan dermed gå
-tapt eller komme på avveier.
+Vi har valgt å skrive en forretningsplan for et produkt som per dags dato ikke
+finnes på markedet, men som vi tror har svært stort potensial.
 
-Alt dette koker ned til at alle eksisterende smarttelefoner på markedet er \textit{tykke
-klienter}. En tykk klient betyr at alle oppgavene utføres av en mikroprosessor
-på selve mobiltelefonen. Den trenger da lokal lagring og minne. 
+Etter vi har forklart forretningskonsepter vil vi presentere hvordan vi akter å
+lage en mest mulig realistisk plan for et slikt produkt.
 
-Det motsatte av dette er \textit{tynnklienter} --- her er selve enheten et
-relativt dumt grensesnitt mot en nettverkstjener. Tenk en PC som mottar bilde
-og lyd i sin helhet fra en tjener. Alle tastetrykk og musebevegelser sendes til
-tjeneren, og tjeneren er den \textit{egentlige} PC-en.
+\section*{Forretningsidéen}
 
-En \textit{tynnklientmobil} vil dermed være en mobiltelefon som er svært simpel
-komponentmessig, men som i prinsippet kan være grensesnittet mot en kraftig
-superdatamaskin, om man så ønsker det. Av dette får man umiddelbare fordeler:
+Alle smarttelefoner på markedet i dag er såkalte \textit{tykke klienter}. Det
+betyr at de utfører alle oppgaver lokalt på selve telefonen fysiske maskinvare.
+Dette krever mange kraftige komponenter, og leder til høyt strømforbruk og dyr
+produksjonskostnad.
 
-Istedenfor å kjøpe nye mobiltelefoner kan man bare kjøpe raskere tjenester i
-skyen. Videoredigering er enkelt, man oppskalerer jobber etter det man trenger.
+Vår idé er å lage en \textit{tynnklientmobil}, der hele mobiltelefonen
+virtualiseres og blir et program som kjører på en tjener i skyen. Den fysiske
+mobilen blir da en dum terminal som kun mottar og sender bilde, video, lyd og
+brukerinteraksjon som befølingstrykk.
 
-\begin{itemize}
-  \item All data ligger lagret på en remote server. Mobiltelefonen inneholder
-  KUN en UUID og et passord i minne. Ved tyveri er mobilen VERDILØS. Faktisk så
-  verdiløs at det er TOTALT unødvendig å stjele en; man MÅ ha abonnement for å
-  kunne bruke den, dermed er tyveri eliminert.
+Fordelene er mange: Telefonen vil bestå av minimalt med komponenter og bør
+derfor bli svært billig å produsere per enhet. Dette leder til at telefonene
+vil kunne bli tynnere --- i \textit{prinsippet} trenger man kun en skjerm og et
+GSM chipset \footnote{Man vil fremdeles trenge noen flere komponenter,
+  inkludert en enkel CPU. Men langt billigere og færre komponenter enn en
+smarttelefon.} --- og få dramatisk bedre batterilevetid.
 
-  \item Det blir ingen mer oppgradering, det skjer automatisk på serveren.
+Ikke minst blir forholdet mellom produsent og kunde mye tettere; kundene må
+abonnere for å kjøre mobiltelefonen i skyen. Dette skaper grobunn for en del
+interessante andre retninger.
 
-  \item Ved tyveri eller tap kan man bare få en ny mobil og fortsette der
-  man slapp. Alle apper, alt man jobbet med, ligger der fremdeles.
-
-  \item Krever minimalt med komponenter: Kun AD/DA konverter, display,
-  minimalt med minne, mic, høyttaler, GSM+radio, evt et kamera. Krever en del
-  mer da, for den trenger jo komprimering av bilde data og sånt. Derfor driter
-  vi i kamera foreløpig. Mindre komponenter betyr tynnere mobil og billigere å
-  produsere.
-
-\end{itemize}
-
-Ulemper: Skape et økosystem, vanskelig å konkurrere med apple og samsung.etc
-
-\section{Abonnementstjeneste}
-
-Den ekte inntekten ligger i abonnementtjenestene. Selve mobiltelefonen bør være
-subsidiert så mye at den i praksis er gratis for kunden. Ved at kunden har all
-data i skyen blir det høy <<lock-in>>, og man vil da tjene penger på
-abonnementet. Vi ser for oss at produktet selges med innebakt mobilabonnement,
-dvs at SIM-kort allerede er installert, og man slipper å opprette avtale med
-hverken Telenor eller noe som helst. Det ordner vi. Hvorfor? For å gjøre det
-enkelt.
-
-Når man ringer til telefonen, så gjør det via Asterix og SIP. Dvs tjeneren
-mottar/starter opp samtale, router til mobilenhet via datatrafikk over nett.
-
-Apper må kjøpes utover abonnementet. Abonnementet bør dekke en god del apps og
-tjenester. 
-
-\section{Fri data, over hele verden}
-
-Som TomTom, får avtale med produsenter. Dette er for å differensiere oss fra
-andre produsenter.
-
-% - forklare idéen og konseptet
-% - forklare HVORFOR det er en god idé
-
-\chapter{Forretningsplan}
+\section*{Forretningsplan}
 
 I denne skissen har vi valgt å bruke <<the business model canvas>>
 \cite{oswalder} som utgangspunkt for en full forretningsmodell.
@@ -87,7 +48,7 @@ Den består av følgende punkter:
   \item Inntektsstrømmer
 \end{itemize}
 
-\chapter{Utførelse}
+\section*{Utførelse}
 
 
 % Datainnsamling
