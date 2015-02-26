@@ -28,6 +28,9 @@ open: all
 %.bbl %.blg: %.aux
 	$(BIBTEX) ${<:.aux=}
 
+words:
+	wc -w tekst.tex
+
 # two passes to resolve links
 %.pdf: %.tex %.ind %.bbl
 	$(PDFLATEX) $< -o $@
