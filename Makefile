@@ -4,6 +4,7 @@ TARGETS := skisse.idx skisse.ind skisse.bbl skisse.pdf
 PDFLATEX := pdflatex -halt-on-error
 MAKEINDEX := makeindex
 BIBTEX := bibtex
+OPEN := xdg-open
 
 # List all targets that are not actual files
 .PHONY: data-all all default benchmarks full sign open check
@@ -13,7 +14,7 @@ default: open
 all: $(TARGETS)
 
 open: all
-	open skisse.pdf
+	$(OPEN) skisse.pdf
 
 # first parse
 %.aux %.idx %.log %.out %.toc: %.tex
