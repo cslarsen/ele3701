@@ -42,7 +42,7 @@ Det viktigste er å undersøke om idéen er økonomisk forsvarlig: Er det mulig 
 tjene penger på dette produktet?
 
 Vi må starte med å kartlegge hvor store investeringskostnader som trengs for å
-bring produktet på markedet.  Dette inkluderer å
+bringe produktet på markedet.  Dette inkluderer å
 
 \begin{itemize}
   \item hente inn priser på komponenter på forskjellige ordrevolum
@@ -69,12 +69,15 @@ dette allerede har bra og billige produkter fra produsenter som Nokia.
 Her kan vi lete etter tall fra statistiske byrå og se etter forretnings- og
 forskningsartikler i forskjellige tidsskrift.
 
+Det kan være lurt å kontakte Telenor Group, Innovasjon og Innovasjon Norge for
+å få tak i data.
 
 \section{Forretningsplan}
 
 For å lage et utkast for en forretningsplan har vi brukt momenter fra
-\textit{the Business Model Canvas} \cite{osterwalder}. Dette skal danne et
-grunnlag for videre jobbing med den endelige rapporten.
+\textit{the Business Model Canvas} \cite{osterwalder} og Innovasjon Norge sin
+mal for forretningsplan \cite{innovasjon.norge}. Dette skal danne et grunnlag
+for videre jobbing med den endelige rapporten.
 
 \subsection{Kundesegment}
 
@@ -89,24 +92,20 @@ Det er vanskelig å lage en klar demografisk profil basert på disse to
 gruppene, men med litt markedsinformasjon kan vi klare å danne oss et mer
 spesifikt bilde på hvilke segment vi ønsker å fri til.
 
-Samtidig må vi huske på at veldig store deler av verden har ikke råd til dyre
-mobiltelefoner. I land som India, Kina, Pakistan og de store urbaniserte
-områdene i Afrika fins det mange folk som ønsker en billig men god mobil. Vi
-ser for oss store kundemasser i storbyer, hvor det forøvrig er bra
-mobildekning, som kreves for denne type produkt.
+Samtidig må vi huske på at mange ikke har råd til dyre telefoner. I land som
+India, Kina, Pakistan og enkelte storbyer i Afrika finnes det et marked for
+billige smarttelefoner. Storbyer med tett befolkning og god mobildekning.
 
-For å kunne tilby et økosystem rundt mobiltelefonen må vi få utviklere på
-plass. Disse blir ikke kunder, men en gruppe vi skaper verdi for: De kan selge
-og tjene penger på vår plattform.
-
-Våre segment vil dermed bestå av
+For å kunne tilby et økosystem rundt mobiltelefonen må tiltrekke eksterne
+utviklere. Disse kan tjene penger på vår plattform og blir dermed et segment vi
+tar med.  Våre segment vil dermed bestå av
 
 \begin{itemize}
   \item de som ønsker en billig mobil (vestlige land)
   \item de som ønsker en billig mobil (Øst-Europa, India, Pakistan, China)
   \item <<early adopters>> som ønsker å prøve ut en radikalt annerledes
     tjeneste (<<mid>> til <<high-end>> brukere)
-  \item app-utviklere
+  \item applikasjonsutviklere
 \end{itemize}
 
 \subsection{Verdiløfte}
@@ -115,15 +114,11 @@ Det verdifulle vi kan tilby våre kundesegment er
 
 \begin{itemize}
   \item En helt ny type mobiltelefon, hvor produkt og tjeneste er ett
-  \item Sikkerhet (vanskeligere at data kommer på avveie)
+  \item Sikkerhet, beskyttelse mot tyveri og tap
   \item Backup (alt ligger på skyen)
-  \item Tyverisikkert (må være abonnent for å bruke mobilenhet)
-  \item Ekstremt billig introduksjonskost, forskjellige abonnementsnivå og
+  \item Billig etableringspris, forskjellige abonnementsnivå og
     -priser (differensiere på lagringsplass brukt, osv.)
   \item Økt batteritid
-  \item Tap av mobil er ikke et problem; en ny er svært billig og alt innholder
-    lever likevel i skyen, så man kan fortsette der man slapp ved å gå ned på
-    Narvesen, kjøpe en ny enhet og logge på
 \end{itemize}
 
 \subsection{Kanaler}
@@ -132,7 +127,7 @@ Vi ser for oss å selge selve enhetene i tradisjonelle butikker
 (elektronikk-kjeder, mobilbutikker), men også i små kiosker (Narvesen, kiosker
 på gaten i storbyer). Dersom vi kan tilby integrerte SIM--kort kan telefonen
 aktiveres på stedet\footnote{Dette er litt utenfor oppgaveomfanget, men en
-svært fristende mulighet: Å kunne tilby både produkt sammen med et
+svært fristende mulighet: Å kunne tilby produktet sammen med et
 mobilabonnement.}.
 
 For å øke bevissthet må vi drive massiv markedsføring. Dette bør gjøres noe
@@ -159,18 +154,6 @@ Imidlertid er det stor sjanse for at etablerte produsenter kan kopiere vår
 modell med en med hybrid løsning, hvor noen tjenester kjører i skyen. Derfor må
 vi satse stort på en kompromissløs tynnklientløsning.
 
-Merk at mange av komponentene som behøvs for å lage telefonen er <<off the
-shelf>>-varer, jmf.~Qualcomm SnapDragon chipset, Mirasol e-ink display, m.m.
-
-Det blir imidlertid en stor investering på tjenersiden: Mens tradisjonelle
-tynnklientløsninger bygger på Pareto-prinsippet --- for eksempel at når Gmail
-tilbød 1 Gb lagringsplass ved introduksjon, så visste de at svært få kom til å
-bruke opp alt --- så bruker folk mobiltelefonen svært mye mer. Derfor må vi
-bygge en enormt avansert skytjeneste. Ikke minst, for å redusere latens
-(<<latency>>) må vi plassere tjenere nære kundene, i en CDN--løsning. Dette er
-ting som krever lang tid for å få opp, spesielt med tanke på all programvaren
-som må spesialutvikles.
-
 \subsection{Inntektsstrømmer}
 
 Vi ønsker å gjøre det enkelt og billig å bli kunde. Derfor må vi subsidiere
@@ -179,7 +162,7 @@ mobiltelefonen kraftig og tjene inn dette på abonnementstjenesten.
 \paragraph{Faste månedsbeløp}
 Det mest grunnleggende abonnementet bør dekke et typisk månedsforbruk med data.
 
-\paragraph{Betal for bruk}
+\paragraph{Betale for bruk}
 Samtidig må det være mulig å betale mer for krevende brukere. For eksempel, de
 som bruker mye lagringsplass kan betale per brukte gigabyte.
 
@@ -195,8 +178,7 @@ for å kunne forbedre automatiserte tjenester.
 
 Det vil sannsynligvis være svært viktig å sikre seg patentbeskyttelse på disse
 idéene tidlig. Ikke bare for konkurransebeskyttelse, men også for å kunne
-stille opp med noe spesifikt i tilfelle vi blir saksøkt av andre. Å være aktør
-på det globale mobilmarkedet er som å spasere på et minefelt av patenter.
+stille opp med noe spesifikt i tilfelle vi blir saksøkt av andre.
 
 \subsection{Nøkkelaktiviteter}
 
@@ -208,30 +190,11 @@ salg, kundestøtte og lignende.
 
 \subsection{Nøkkelpartnere}
 
-Vi nevner kort
-
-\begin{itemize}
-  \item Mobiloperatører
-  \item Komponentprodusenter
-  \item Patentbyrå
-\end{itemize}
+Vi nevner kort \textit{mobiloperatører}, \textit{komponentprodusenter} og
+\textit{patentbyrå}.
 
 \subsection{Kostnadsstruktur}
 
-De viktigste kostnadene i første fase blir
+De viktigste kostnadene i første fase blir forskning og utvikling, samt
+etablering og drift av datasentre.
 
-\begin{itemize}
-  \item Forskning og utvikling
-  \item Etablering av datasentre
-\end{itemize}
-
-
-\subsection{Exit--strategy}
-
-Selv om dette ikke er en del av <<the Business Model Canvas>> så vil vi nevne
-kort muligheter for en <<exit-strategi>>.
-
-De store produsentene vil nok sakte bevege seg i retning av tynne klienter, men
-i en mer hybrid modell.  Derfor er en del av planen vår å være pionérer og
-beskytte intellektuelt eierskap med patenter.  En \textit{exit-strategi} vil
-dermed være å tilby kompetanse og IP til slike firma.
