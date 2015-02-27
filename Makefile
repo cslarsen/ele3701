@@ -4,7 +4,13 @@ TARGETS := skisse.idx skisse.ind skisse.bbl skisse.pdf
 PDFLATEX := pdflatex -halt-on-error
 MAKEINDEX := makeindex
 BIBTEX := bibtex
-OPEN := xdg-open
+UNAME := $(shell uname -s)
+
+ifeq ($(UNAME),Darwin)
+	OPEN := open
+else
+	OPEN := xdg-open
+endif
 
 # List all targets that are not actual files
 .PHONY: data-all all default benchmarks full sign open check
