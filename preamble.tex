@@ -1,9 +1,18 @@
 % Norwegian
 \usepackage[norsk]{babel}
 
+% Hyperlenking
+\usepackage{url}
+
 % Latin1 Times Roman font for Norwegian
 \usepackage{times}
 \usepackage[T1]{fontenc}
+
+% Endre "kapittel X" til noe annet, gitt vi bruker Babel
+\addto\captionsnorsk{\renewcommand{\chaptername}{Del}}
+
+% Bruk romerske tall for kapitlene
+% TODO: Fiks dette
 
 % Be able to change the title style
 \usepackage{titling}
