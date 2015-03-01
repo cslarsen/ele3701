@@ -1,4 +1,5 @@
-TARGETS := skisse.idx skisse.ind skisse.bbl skisse.pdf
+TARGETS := rapport.idx rapport.ind rapport.bbl rapport.pdf \
+	skisse.idx skisse.ind skisse.bbl skisse.pdf
 
 # executables
 PDFLATEX := pdflatex -halt-on-error
@@ -20,6 +21,9 @@ default: open
 all: $(TARGETS)
 
 open: all
+	$(OPEN) rapport.pdf
+
+open2: all
 	$(OPEN) skisse.pdf
 
 # first parse
