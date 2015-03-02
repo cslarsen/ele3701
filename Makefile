@@ -1,10 +1,17 @@
-TARGETS := skisse.idx skisse.ind skisse.bbl skisse.pdf
+TARGETS := rapport.idx rapport.ind rapport.bbl rapport.pdf \
+	skisse.idx skisse.ind skisse.bbl skisse.pdf
 
 # executables
 PDFLATEX := pdflatex -halt-on-error
 MAKEINDEX := makeindex
 BIBTEX := bibtex
-OPEN := xdg-open
+UNAME := $(shell uname -s)
+
+ifeq ($(UNAME),Darwin)
+	OPEN := open
+else
+	OPEN := xdg-open
+endif
 
 # List all targets that are not actual files
 .PHONY: data-all all default benchmarks full sign open check
@@ -14,6 +21,9 @@ default: open
 all: $(TARGETS)
 
 open: all
+	$(OPEN) rapport.pdf
+
+open2: all
 	$(OPEN) skisse.pdf
 
 # first parse
