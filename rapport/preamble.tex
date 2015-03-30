@@ -1,0 +1,63 @@
+% Norwegian
+\usepackage[norsk]{babel}
+
+% Hyperlenking
+\usepackage{url}
+
+% Latin1 Times Roman font for Norwegian
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+% Endre "kapittel X" til noe annet, gitt vi bruker Babel
+\addto\captionsnorsk{\renewcommand{\chaptername}{Del}}
+
+% Bruk romerske tall for kapitlene
+% TODO: Fiks dette
+
+% Be able to change the title style
+\usepackage{titling}
+
+% Bibliography in table of contents
+\usepackage[nottoc]{tocbibind} 
+
+% Norwegian 1.5 linespacing
+\usepackage{setspace}
+
+% BI guidelines:
+%\onehalfspacing
+%\usepackage[top=2cm,bottom=2cm,left=5cm,right=2cm]{geometry}
+
+% Enable UTF-8 text
+\usepackage[utf8]{inputenc} % enable UTF-8 text
+
+% Adds bibliography to table of contents
+\usepackage[nottoc]{tocbibind}
+
+% Use newlines in paragraph instead of indentation
+\usepackage{parskip}
+
+% Build index, using the new imakeidx in TeX Live, see
+% http://tex.blogoverflow.com/2012/09/dont-forget-to-run-makeindex/
+%\usepackage{imakeidx}
+%\makeindex
+
+% Uncomment this if you want to show all \index{} locations in the document
+% in the margins (good for proofreading)
+%\usepackage{showidx}
+
+% Hyperlinks, clickable references
+% Hidelinks turns off colored box on some PDF viewers
+%\usepackage[hidelinks]{hyperref}
+
+% On Mac OSX, in ViM, when I type ALT+SHIFT+SPACE (often typed accidentally
+% after writing {\some-command ...}, then LaTeX may give me the error
+% "Unicode char \u8:  not set up for use with LaTeX.".  This character
+% in UTF-8 actually means what the tilde (~) means in LaTeX, but *I*
+% usually mean just a space.  This command replaces those with a
+% normal space:
+\DeclareUnicodeCharacter{00A0}{ }
+% If I really want the tilde-behaviour, I can use the command
+%\DeclareUnicodeCharacter{00A0}{~}
+%
+% The above solution was taken from:
+% http://tex.stackexchange.com/questions/83440/inputenc-error-unicode-char-u8-not-set-up-for-use-with-latex

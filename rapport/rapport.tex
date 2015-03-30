@@ -1,0 +1,41 @@
+\documentclass[a4paper,norsk,12pt]{report}
+\input{preamble}
+\begin{document}
+
+
+  \date{\textbf{BI Stavanger}\\12.~mai, 2015}
+  \title{ELE3701 --- Innovasjon og entreprenørskap\\ \vskip 0.5em
+  \textbf{Forretningsplan for tynnklientmobil}\\
+    \textit{Prosjektrapport}}
+
+  \pretitle{\begin{flushleft}\LARGE}
+  \posttitle{\par\end{flushleft}\vskip 2.0em}
+  %
+  \preauthor{\begin{flushleft}\large}
+  \postauthor{\par\end{flushleft}}
+  %
+  \predate{\begin{flushleft}\large \vskip 0.5em}
+  \postdate{\par\end{flushleft}}
+  %
+  \renewcommand{\maketitlehooka}{%
+    \null\hfill\begin{tabular}[t]{l@{}}%
+      \small{Student ID 1511273}%
+      \end{tabular}%
+      \vspace*{20em}%
+    }
+  %
+  \setlength{\droptitle}{-10em}
+  %
+  \begin{titlingpage}
+  \maketitle
+  \end{titlingpage}
+
+  \tableofcontents
+
+  \clearpage
+  \input{raptekst}
+
+  \bibliography{innovasjon}
+  \bibliographystyle{plain}
+
+\end{document}

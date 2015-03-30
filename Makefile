@@ -1,3 +1,3 @@
 all:
-	$(MAKE) -C skisse
-	$(MAKE) -C oppgave
+	$(MAKE) -C skisse.pdf
+	$(MAKE) -C rapport.pdf
