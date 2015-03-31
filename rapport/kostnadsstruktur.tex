@@ -1,1 +1,69 @@
 \section{Kostnadsstruktur}
+
+Skille mellom kostnad for å få opp alt og selge første telefon, deretter
+operativ drift etter vi har kunder. Blir en overgang, hvor det brennes mye
+penger i begynnelsen og så stabiliserer seg over tid. Over tid vil man også se
+etter måter å redusere kostnader på, feks inngå volumavtaler, flytte apps
+nærmere kunden (CDN) osv. Disse må være TALLFESTET.
+
+Datasenter: Hvor mange brukere per maskin? Husk at vi i prinsippet tillater kun
+1 app å kjøre til enhver tid. De som ikke er aktive saver state (i API, bør
+være billig som i kreve lite lagringsplass).
+
+Drift av sentre, båndbredde, voip, sms-gw, osv. Blir heavy på denne siden, a la
+altibox. Må ha CDN osv.
+
+R&D blir heavy i begynnelsen, faktisk en syk kost for å få det til.
+
+Telefon: Må beregne å ta mellom 2-3 tusen for den? Regna litt på det.
+
+Må også se på inntekter... husk at datatrafikk blir en del, men vi MÅ over på
+wifi. Ser for meg 2500 for telefon og hvis vi ikke har integrert dataabb så må
+det koste 150 i mnd, dette på toppen av dataabb som blir fort 300. Så blir jo
+egentlig ganske dyrt. Vi kan lure inn en avtale som egen operatør, men det blir
+fremdeles dyrt. Target må være 300 kr per måned som tak, ellers vil jo folk
+velge andre tjenester. Poenget er jo det å ha en dritbillig tlf.
+
+ALTERNATIV: Lage en smartklokke som er tynnklient? Dritvanskelig å lage så små
+devices, men den kan være ypperlig siden det er mindre skjerm = mindre data,
+den trenger virkelig dette med å kunne offsette cpu-kraft til skyen. Dette er
+også et marked som ikke fins enda, alle prøver seg, så det må være "lov" å
+eksperimentere her.. fins jo en klokke (fred.olsen) som er always on (AT&T),
+får sikkert med telenor på dette.
+
+Bruke mirasol display... e-ink, bruker lite strøm. Trenger ingen backlight. Kan
+ses i sollys.
+
+Pluss, folk er vel egentlig ikke interessert i å se video på små klokker, men
+vil da heller bruek den til andre ting.. og vi kan tilby masse gudd shitt,
+spesielt siden man ikke trenger mye lagringsplass... inkl sende og motta
+beskjeder (via diktering, som skjer serverside), samtaler (enkelt å rute)..
+tror ikke apple watch har noe mobilgreier i seg, så her har vi fordel.. MÅ være
+integrert sim, så har et lite window of opportunity her.
+
+Se på value proposation whitepaper for mirasol, står en del interessante tall
+der som vi kan bruke.
+
+Hvem vil ha denne da? Faktisk kan vi til og med selge til de som ikke vanligvis
+bruker mobil. Gamle folk kan ha et kodeord de sier, så aktiveres en
+hjelpefunksjon (feks operatør) som kan hjelpe dem. Kan brukes av klatrere,
+redningsfolk.. vanlige folk som er på farten, osv. Eneste er integrasjon m
+mobil som blir et problem, vi bygger jo egen silo her.
+
+"Eventually we're going to make a mobile phone", sånn pitch-aktig.
+
+USA er egentlig perfekt marked, for vi kan ha avtale på hele USA. I Europa er
+det mer stress, men det har blitt gjort for enkle ting (feks TomTom).
+
+Apple watch resolution: 340px height liten modell, 390px stor modell.
+Så ca 270x340 vs 312x390
+Det blir 270*340=92k vs 312*390=121k
+Hvor mye kan PNG komprimere? GIF har typisk 4:1-10:1, PNG 10-30 prosent mindre,
+En kombinasjon av JPEG+lossless funker og blir mye brukt... JPG har jo i medium
+30-50:1, så vi kan regne med kanskje 1:10-1:20? da snakker vi om 12k-24k for et
+bilde. Animasjoner: Kan ha swipe-animasjoner som default, sånn internt minne
+bufrer 4 skjermer (for swiping i alle retninger), swiping er da smooth.
+Fabrice bellard sin sak, BPG, gir vel en bra komprimering vs kvalitet?
+Så hiver på komprimering, tipper vi kan nå 1/10, så 9-12k per bilde da.
+
+Tror dette kan funke...
