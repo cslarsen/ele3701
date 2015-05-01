@@ -1,6 +1,7 @@
 \chapter{Forretningsplan}
 \label{del1}
 
+% Denne bør egentlig være executive summary.
 \input{forretningsplan/introduksjon}
 
 % Må begynne med å snakke om markedet og om behov. Altså snakke om vår mulighet
@@ -32,8 +33,9 @@
 % tjeneste over 3 år, men har mye mer jevn og forutsigbart salg.
 
 % Det jeg skrev over er hele forretningsplanen: Tynnklient + abonnement,
-% punktum. Sekundære mål: Spesialapps (1881, Trygghetsalarm, osv). Tertiære
-% mål: OEM, selge komponenter, selge trådløse OEM komponenter for å styre
+% punktum. Sekundære mål: Spesialapps (1881, Trygghetsalarm, osv). 
+
+% Tertiære mål, nesten exit-strategier: OEM, selge komponenter, selge trådløse OEM komponenter for å styre
 % vending machines, kaffemaskiner, terminaler for SAS osv. Hvorfor? Fordi dette
 % er ting som ALLTID _spesiallages_ til hvert enkelt formål. Vi bygger jo opp
 % en FELLES plattform som vil funke på ALLE slike devices, fordi skjermbildet
@@ -42,6 +44,25 @@
 % oss på andre typer produkter. ALLE produktene vil styrke plattformen.
 % Apple/Samsung gjør IKKE dette, og ignorerer dette helt (kan være av en
 % grunn). De PRØVER feks med iPad på fly, men de får det ikke helt til.
+
+% Exit-strategier: Bli kjøpt opp, pivot til OEM. Beskyttelse ved å bygge opp IP
+% portefølge med patenter osv. Andre fordeler med vår plattform: Kan kode i hva
+% språk en vil.
+
+% NDE: Selge spesialløsning for trygghetsalarm, vending machine. Bygge opp
+% beskyttelse i form av IP, patenter -> dette kan selges i helhet eller som
+% OEM. Visjon er å lage mobiltelefon. Men mål nr 1 er å lage en klokke som
+% selges til kunder, vi MÅ tjene penger tidlig ellers går alt i vasken. Vi
+% kunne startet med OEM, men da renner tiden ut. Den er nå gylden. Er nesten
+% egentlig litt seint ute, men se på Pebble, de har vært en stund og ser ut som
+% Apple kommer til å _knuse_ de. Hvorfor? Ekkelt møkkaprodukt uten noen form
+% for hooks. Vår hook er jo tynne devices med lav produksjonskost og enorm
+% batteritid. Vi kommer til å vinne. Så bygger vi opp plattform. Mobil
+% tynnklient krever for mye båndbredde, men ikke telefon. Og tablets er det
+% ikke viktig, men de er såpass avanserte at det er vanskelig å komme inn på
+% markedet <=== VIKTIG POENG, ergo derfor satser vi på klokke strategisk.
+
+% TODO: Reinskriv alt dette over.
 
 % Forretningsmål
 
@@ -63,7 +84,151 @@ Et godt forretningsmål er jo å tjene penger på å tilby noe som folk trenger.
 Mens Apple sitt fokus er på helse og kommunikasjon, er vårt fokus på trygghet,
 for eksempel. For gamle, for barn, osv. (Se på den klokka som Stian fant).
 
+Exit-strategier er NDE, OEM, IP, patenter, komponenter, selge hele eller deler
+av dette.
+
 % Grunner til at målene kan oppnås
+
+Nytt voksende marked. Når de store satser kan vi være med i dragsuget. Er også
+nytt marked, så folk har ikke dannet en oppfatning av hva denne typen
+produktkategorien kan tilby. Altså hva de forventer av et slikt produkt. Dermed
+kan vi være med å forme denne oppfatningen, men da må vi være kjappe. Dette er
+en fordel. Kan være med og definere spillereglene.
+
+MÅ HA FLERE GRUNNER!
+
+Vår løsning er tynnklient, betyr at mye av kompleksiteten flyttes over til
+serverne, som er fordel for produksjon (lav kostnad, enkelt å utvikle) av
+klokke og apps: Lang batteritid, billigere å produsere pga mindre komponenter,
+tynnere av samme grunn, evt bruke plassen til batteri. ENkelt å programmere
+for, fordi man trenger ikke lage et program som skal tvinges inn i en
+bitteliten dings som nesten ikke har strøm.
+
+En edge med batteri og enkelhet.
+
+Virtualisering: Lett å ekspandere med cloud-løsninger (CDN).
+
+% MERK: Hvis disse grunnene skal funke må det være veldig bra forklart hva
+% produktet er. Mulig skissen funker som dette, men det bør gjentas i oppgaven
+% her, kort.
+
+Relativt lav inngangsbillett pga produktet er ikke så komplisert som feks en
+smarttelefon.
+
+Tilbyr noe unikt! PARTNERE med trygghetsalarm, brannvesen, securitas, danne
+partnerskap.
+
+MÅ HA MER.
+
+På siden:
+Fred.Olsen har allerede via sitt Timex firma laget en klokke som alltid er på
+nett hele tiden i hele USA. Ergo er teleoperatører villige til å være med på
+sånt. Vi MÅ ha en sak som funker i utlandet, der vi har partnere/avtaler men
+også tar kosten for de få kundene som er ute (altså vi spanderer det, usynlig
+for kunden).
+
+% Planer for å nå målene
+
+Hva er målene? Har jo skissert noe over, må bare sorteres i riktig rekkefølge.
+
+Prototype, teste, markedsføring, crowdsourcing? kanskje ikke i begynnelsen, pga
+vi vil være stealth. Og crowdsourcing må ha et vanvittig klart
+konsument-appeal.
+
+% Hva slags type team trenger vi?
+Teamet vi trenge: Utviklere primært, og spesielt i begynnelsen. Software- og
+hardware-utviklere. Alt faller på at prototypen funker i praksis, dvs at den
+når mål om strøm og pris på abonnement. Når dette er iorden må vi danne
+partnerskap. Vi trenger dermed fort businesspersoner, etterhvert må vi etablere
+infrastruktur for salg og support osv.
+
+Fordel: Vår klokke kan spesialtilpasses LETT ulike mål. Istedenfor generell
+smartklokke kan vi LETT differensiere produkt med samme device, men annen
+software i skyen, som trygghetsalarm. Dritbra poeng for å få opp salg, mens
+dette går og tjener peng blir IP og plattform utviklet. Men det drar også fokus
+vekk fra vårt mål: Massekonsumentene (altså vanlige folk), og tar alltid mer
+tid og ressurser enn forventet. Men det kan være en smart måte å begynne på og
+få traction. MEN vi har dårlig tid, smartklokkene fra de store er allerede her.
+Prototypen kunne dermed vært å lage en trygghetsalarm, men er som sagt redd for
+det tar for mye fokus vekk. Når vi tjener penger på denne typen produkt så blir
+det vanskelig å endre organisasjonen til noe nytt. Altså, vi kan ikke gjøre
+begge deler samtidig, men én av tingene først.
+
+Alarm: Voldektsalarm -> GPS -> politi. Fordel kan glemme mobilen hjemme, klokka
+funker likevel. Megafordel ifht Apple Watch.
+
+% Basisstruktur
+
+Markedsanalyse:
+
+Relatert industri: Software, alarm, klokke, smarttelefon, IT, vending machines
+osv.
+
+Markedsbevissthet: STOR, alle venter på det. Hvor fort kan vi imidlertid kome
+igang? (Dette må være med i SWOT, "window of opportunity" minker fort, vi er
+ikke first mover så har ikke den fordel. MEN vi lager ekte INNOVASJON, og kan
+være lurt som små å følge de store (tror dette står i boka)).
+
+MVP (minimum viable product) = Trygghetsalarm, hvis vi får laget avtale. TODO:
+Slå opp om trygghetsalarm og se hvordan de funker. Tror de må ha hussentral,
+men hvor ofte må de lades? Evt kan man lage større boks med batteri i.
+Må bestemme om strategi med å lage trygghetsalarm er den lure måten å gå på.
+Microsoft begynte med basic compilere på alle maskiner, og så OS. To
+forskjellige ting, men samtidig så utrolig logisk progresjon; de solgte
+allerede til alle. Vi må ikke være dumme og prøve oss på to typer produkt.
+Men sånn sett så ER det samme produkt: Nøyaktig samme device, bare annen
+software. Så det funker. Men kan være vanskelig å komme inn på markedet for
+trygghetsalarm, fordi det er allerede mange om beinet. Og vår løsning er gjerne
+dyrere (eller? Sjekk priser!!! Kanskje vår er INSANELY mye billigere, fordi man
+ikke trenger hjemmesentral? Pluss vi kan faktisk sjekke om devicen funker,
+remotely! Og kan ha human operatører. Og device kan brukes til noe mer.) Denne
+strategien må diskuteres med noen.
+
+Kunnskap, forskning, resultat? Finn noe og ref det.
+
+Størrelse på marked: Ca 10 mrd, antatt, vokse til ca 100 mrd. Har artikkel,
+må lese den og se hvordan de har argumentert.
+
+VIKTIG OG DRITBRA: 1881, de bommer TOTALT på appene sine. De tilbyr kun oppslag
+i telefonkatalog, som er veldig enkelt å kopiere. Så derfor har de massiv
+markedsføring. De har også en telefontejeneste hvor en kan spørre om hva en
+vil. Hvorfor er ikke denne tilgjengelig fra mobil? Jo, den er, de må ringe, men
+vi har en logo med 1881, klikk, snakk med person, regning på abb. Kan bli en
+partner. Tenk "sekretær-app" a la magic.
+
+Kritiske behov for konsumenter? Veeel. Det er jo en klokke, så behovet er å
+vise tiden. Det kan hvem som helst gjøre. Apple gjør det mer fancy bare, det er
+alt de gjør. De satser på helse. Vi kan satse på ting som trygghet.
+
+Eldre: Trygget + alarm
+Barn: Trygget + kommunikasjon med foreldre
+Andre: Nyttig dings som viser tiden, m.m. Gjør hverdagen enklere.
+
+Målmarked: Norge, Europa. Størrelse på dette da? Tjaaa... Tror at folk kommer
+til å se fordelen med smartklokke. Man betaler jo lett mange mange tusen for en
+fancy klokke, men må likevel stille den av og til. De dyreste har
+månedsvisning, dvs hvilken dag det er. Denne må stilles. Er helt ånnas,
+spesielt når en vanlig digitalklokke er bedre sånn sett. Så når folk ser hvor
+bra det er med smartklokke så vil nok markedet vokse. DOG, fancyklokker er jo
+motedings, men jeg tror markedet for vanlige klokker minsker inn. OEM forøvrig,
+mange som gjør det i Sveits, BOSS-klokker og alle egentlig er produsert av ett
+stort firma. Kan jo sjekke hva de tjener. De lager urhuset, så lager boss
+designet. Så her snakker vi om penger faktisk! Kanskje dette er lurere? Med
+tynnløsning kan de jo lage den så spesifikk de vil.
+
+Trenger REFS og TALL. Bruk biblioteket. Lag diagrammer for å vise hvordan alt
+henger sammen. Lag grafer også, det er alltids gudd.
+
+Demografi: Barn, alle, eldre. Land? Vestlige primært. Klarer vi å lage billig
+nok kan vi satse i India og slike land.
+
+Vår hovedprofil: Altså en nyttig smartklokke, beveger oss mot personlig
+menneskelig kontakt... tjaa 
+
+Apple: Utviklere kommer til dem. Oss: Vi må gå til utviklere, dvs partnere.
+Dette er en strategi / plan.
+
+Vi trenge altså en identitet.
 
 
 \input{forretningsplan/swot}
