@@ -1,49 +1,69 @@
 \section{Kostnadsstruktur}
 
-Hele kostnadsstrukturen kan deles inn i to store faser:
-
-\begin{itemize}
-  \item \textbf{Opprettelse av bedrift}: Utvikling av første produkt og etablering av
-  organisasjonell infrastruktur.
-  \item \textbf{Jevn drift}: Skalering av salg, minimering av kostnader, osv.
-\end{itemize}
-
-I første faste inngår alt som trengs for å selge vårt første produkt til vår
-første kunde. Etter hvert som vi får flere kunder beveger vi oss inn i andre
-fase.
+Hele kostnadsstrukturen kan deles inn i to store faser: \textbf{Opprettelse av
+bedrift}, altså utvikling av første fungerende produkt og etablering av
+organisasjonell infrastruktur, og \textbf{Jevn drift}, skalering av salg og
+minimering av kostnader.
 
 For å se om bedriften er levedyktig må vi estimere kostnader så godt vi kan.
 Under har vi gitt en forenklet \em{bill of materials}, eller \em{BOM}.
+% TODO: Gi ref til hvordan vi har kommet frem til priser og volumpriser
 
 \begin{table}[h]
-\begin{tabular}{lrr}
-\textbf{Del}         & \textbf{Pris (USD)} & \textbf{Volumpris (USD)} \\
-CPU                  & 20.00         &   15.00 \\
-RAM                  &  1.00         &    0.50 \\
-ROM                  &  1.00         &    0.50 \\
-Batteri              &  2.00         &    1.00 \\
-Skjerm               & 10.00         &    8.00 \\
-I/O (lyd)            &  1.00         &    0.80 \\
-Annen elektronikk    & 10.00         &    8.00 \\
-Ikke-elektronikk     & 10.00         &    8.00 \\
-Montering og testing &  2.00         &    1.50 \\
-\textbf{SUM (NOK)}   & 456.00        &  342.40 \\
-\end{tabular}
+  \centering
+  \begin{tabular}{lrr}
+    \textbf{Del} & \textbf{Pris (NOK)} & \textbf{Volumpris (NOK)} \\
+    \hline
+    CPU                  & 152.00        &  114.00 \\
+    RAM                  &   7.60        &    3.80 \\
+    ROM                  &   7.60        &    3.80 \\
+    Batteri              &  15.20        &    7.60 \\
+    Skjerm               &  76.00        &   60.80 \\
+    I/O og lyd           &   7.60        &    6.08 \\
+    Annen elektronikk    &  76.00        &   60.80 \\
+    Ikke-elektronikk     &  76.00        &   60.80 \\
+    Montering og testing &  15.20        &   15.20 \\
+    \\
+    \textbf{Sum}  & 433.20        &  332.88 \\
+  \end{tabular}
+  \caption{Produksjonskostnad per smartklokke}
+  \label{table.pris.klokke}
 \end{table}
 % TODO: Gi referanser hvordan vi har kommmet frem til dette.
 
-Følgende er serveroversikt for 250 kunder per måned.
+For å beregne datatrafikk har vi tatt utgangspunkt i en skjermstørrelse på
+144x168 piksler, en komprimeringsfaktor\footnote{Komprimeringsalgoritmer har en
+  typisk reduksjonsfaktor på $\sfrac{1}{10}$--$\sfrac{1}{20}$, men ved å
+  utnytte typiske bruksmønstre kan vi optimalisere dette ved bruk av smart
+mellomlagring.} på $\sfrac{1}{20}$ og sending av nytt skjermbilde hvert femte
+sekund, hele døgnet.  Trafikkmengden per bruker per måned blir da
+%
+\begin{gather*}
+144\cdot168\cdot\sfrac{1}{20}\cdot\sfrac{3600}{5}\cdot24\cdot31\cdot\sfrac{1}{10^9}
+= 0.65~\sfrac{\textsf{Gb}}{\textsf{mnd}}
+\end{gather*}
+
+Vi anser dette som et øvre tak på trafikkmengden. Det betyr at kunder som har
+eksisterende abonnement kan benytte tvilling-SIM. For de som ikke har det kan
+vi selge eget SIM-kort og ta rundt kr 100 per måned.
+
+%
+For å beregne kostnader til serverpark har vi tatt utgangspunkt i en
+konfigurasjon som skal takle minst 250 kunder. Kostnadene er per måned.
 % TODO: HAr brukt AWS https://awstcocalculator.com/# for dette
 
 \begin{table}[h]
-\begin{tabular}{lr}
-\textbf{Server}      & \textbf{Pris (USD)} \\
-Tykk klient       & ? \\
-Voice og SMS      & ? \\
-Database          & ? \\
-Lagring (1 Tb)    & \\
-\textbf{SUM (NOK)} & 3200 \\
-\end{tabular}
+  \centering
+  \begin{tabular}{lr}
+  \textbf{Server}      & \textbf{Pris (USD)} \\
+  Tykk klient       & ? \\
+  Voice og SMS      & ? \\
+  Database          & ? \\
+  Lagring (1 Tb)    & \\
+  \textbf{SUM (NOK)} & 3200 \\
+  \end{tabular}
+  \caption{Serverpris per måned}
+  \label{table.serverpris}
 \end{table}
 
 Tror vi kan klare oss med langt mindre maskiner. MÅ ha to maskiner per
