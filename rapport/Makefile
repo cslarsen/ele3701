@@ -17,7 +17,10 @@ endif
 
 default: open
 
-all: $(TARGETS)
+all: all-plots $(TARGETS)
+
+all-plots:
+	$(MAKE) -C plots all
 
 open: all
 	$(OPEN) rapport.pdf
@@ -90,4 +93,5 @@ check-label:
 	@echo ""
 
 clean:
+	$(MAKE) -C plots clean
 	rm -f $(TARGETS) *.log *.toc *.aux *.bbl *.blg *.out *.ind *.ilg *.idx *.tdo *.lof *.lot *.loa *.lol
