@@ -1,4 +1,5 @@
 % DIVERSE NOTATER
+%
 % Nitec, fins i stavanger, nitec.no. Kjempebra partner for utvikling.
 % De selger faktisk trygghetsalarm med gsm i, men ser ut til å være stasjonær.
 % Sier at analoge linjer skal legges ned, derfor trengs nye løsninger! <--- MÅ
@@ -20,6 +21,18 @@
 % det er morgen, feks se når brukeren vanligvis står opp, og gir beskjed med
 % hyling om den ikke er tatt på. :) De kjører IP67, så vi har jo en utfordring
 % der, men det er bare vannavstøtende og ikke vanntett.
+%
+% Herlighet, se på lfh.no. Det er jo et sykt bra poeng at eldregruppen bare
+% øker og øker, og vi forventer en eksplosjon på det området nå. Alle prognoser
+% viser at det forventes sykt mye mer nødvendighet for hjelp. lfh.no sier i
+% http://lfh.no/wp-content/uploads/2013/09/LFH-Tallfakta-kommune-WEB.pdf at man
+% forventer at 380k personer vil ha behov for hjemmetjenester i 2040.
+% Nivå for driftskostnader var 85 milliarder kr i 2012... Forventet i bli 147
+% mrd i 2040. "Konsekvensene av eldrebølgen forventes å eskalere i 2020..."
+% sier den saken. Derfor anbefaler LFH at Staten investerer i innovative
+% løsninger allerede i dag.
+% Hjemmetjenester er en del av primærhelsetjenesten i Norge (sykehus, osv).
+% Vi opererer i markedet for hjemmetjenester.
 
 \chapter{Forretningsplan}
 
@@ -80,8 +93,16 @@ vil kunne innhente anonyme bruksmønstre for å se hva som fungerer godt, og
 oppdatere programvaren tilsvarende. Pårørende vil også ha muligheten til å
 følge brukerens lokasjon.
 
+Med eldrebølgen forventer vi å måtte bruke mye mer tid og penger på
+helsetjenester, spesielt hjemmetjenester \cite{lfh.innspill}. Teknologien i
+dette markedet er fremdeles underlegen sammenlignet med en typisk smarttelefon
+\cite{alarmparadokset}. Dette fører til at driftskostnadene er høyere enn det
+kunne vært mer ny teknolog. Man forventer at driftsomkostninger for
+primærhelsetjenesten skal øke fra 85 milliarder kroner i 2012 til 142
+milliarder i 2040 \cite{lfh.innspill}.
+
 \textbf{Forretningsidéen er dermed å utvikle vår tynnklient mobilplattform
-gjennom å lage en trygghetsalarm som første produkt.}
+gjennom å lage en avansert og driftsbillig trygghetsalarm som første produkt.}
 
 Forretningsplanen vil være utformet med trygghetsalarmen som utgangspunkt, med
 tynnklientløsningen som bakteppe. Vi vet hvor vi vil, men må ha en realistisk
@@ -112,7 +133,7 @@ som mobiltelefoner, smartklokker og nettbrett.
              & \textbf{Muligheter}    & \textbf{Trusler}              \\
              & Høy pris               & Mettet marked                 \\
              & Krever hussentral      & Direktiver og godkjenninger   \\
-             & Lite innovasjon        & Priskrig                      \\
+             & Sakte innovasjon       & Priskrig                      \\
              & Krever ekstra mobil    & Lavt volum                    \\
              & Ingen skjerm           & Gode nok eksisterende produkt \\
              & <<Disruption>>         & Sensorintegrasjon sentral     \\
@@ -124,6 +145,9 @@ som mobiltelefoner, smartklokker og nettbrett.
 \section{Forretningsmodell}
 
 \subsection{Kundesegment}
+
+% (1) Kommuner, gjennom Hjelpemiddelsentralen, (2) Gjennom partnersalg, (3)
+% Privatpersoner --- rangert etter størrelse på marked
 
 Primært eldre som får trygghetsalarm gjennom Hjelpemiddelsentralen, men også
 privatpersoner som ikke er kvalifisert for offentlig hjelp. Dette kan være
@@ -188,20 +212,21 @@ tar også en stor del av månedsprisen.
 % å spare penger.
 %%%%%%%
 
-Vi sender til
-hjelpemiddelsentralen, som da skal enkelt kunne sette opp tjenesten selv. Da
-enhetene er koblet opp mot nett og har en skjerm kan de lett settes opp til
-hver bruker på stedet. De kan verifisere med sentralen at dette er satt opp
-riktig. Sentralen har et grensesnitt på nett for drift. På denne måten skal det
-være mulig å kunne levere tjenesten på dagen. For privatkunder gjelder det
-samme, men de setter den da opp selv. Sender da i posten.
+Vi sender til hjelpemiddelsentralen, som da skal enkelt kunne sette opp
+tjenesten selv. Da enhetene er koblet opp mot nett og har en skjerm kan de lett
+settes opp til hver bruker på stedet. De kan verifisere med sentralen at dette
+er satt opp riktig. Sentralen har et grensesnitt på nett for drift. På denne
+måten skal det være mulig å kunne levere tjenesten på dagen. For privatkunder
+gjelder det samme, men de setter den da opp selv. Sender da i posten.
 
-Markedsføring skjer i første omgang direkte med Hjelpemiddelsentralen. Vi må
-ha et møte med demonstrasjon og inngå avtale om et pilotprogram. Etter de
-første enhetene er tatt i bruk skal vi profilere oss gjennom bransjeblad og på
-konferanser. Vi skal ha en sterk tilstedeværelse på nett, være lett å søke opp
-og gi en god presentasjon. Til slutt kan vi ha reklame i ukebladet som Se og
-Hør, Allers og så videre, for at potensielle sluttbrukere kan finne oss.
+Markedsføring skjer i første omgang direkte med Hjelpemiddelsentralen. Vi må ha
+et møte med demonstrasjon og inngå avtale om et pilotprogram. Etter de første
+enhetene er tatt i bruk skal vi profilere oss gjennom bransjeblad (som
+Bransjeorganisasjonen for helse- og velferdsteknologi) og på konferanser.
+
+Vi skal ha en sterk tilstedeværelse på nett, være lett å søke opp og gi en god
+presentasjon. Til slutt kan vi ha reklame i ukebladet som Se og Hør, Allers og
+så videre, for at potensielle sluttbrukere kan finne oss.
 
 \subsection{Kunderelasjon}
 
