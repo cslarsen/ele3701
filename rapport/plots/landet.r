@@ -1,4 +1,5 @@
 total <- read.csv("ssb.alarm.csv")
+#total <- total[3:7,]
 nye <- read.csv("ssb.nye.csv")
 gjstr <- read.csv("ssb.gjstr.csv")
 
