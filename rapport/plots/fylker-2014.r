@@ -1,0 +1,7 @@
+r <- read.csv("fylker-2014.csv")
+s <- read.csv("fylker-kostra-2014.csv")
+# TODO: Vis antall som del av labels, bedre farger eller mønstre)
+pdf("fylker-2014.pdf")
+pie(r$Personer, r$Fylke, main="Mottakere av trygghetsalarm i 2014")
+pdf("fylker-kostra-2014.pdf")
+pie(s$Personer, s$Kostragruppe, main="Per KOSTRA-gruppe i 2014")
