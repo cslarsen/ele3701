@@ -79,3 +79,11 @@
 
 % To include entire PDFs
 \usepackage{pdfpages}
+
+% Thick hline
+\makeatletter
+\newcommand{\thickhline}{%
+      \noalign {\ifnum 0=`}\fi \hrule height 1pt
+          \futurelet \reserved@a \@xhline
+        }
+\makeatother
