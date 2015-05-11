@@ -1,4 +1,4 @@
-\documentclass[a4paper,norsk,12pt]{report}
+\documentclass[a4paper,norsk,12pt,twoside]{report}
 \input{preamble}
 \begin{document}
 
@@ -30,9 +30,10 @@
   \maketitle
   \end{titlingpage}
 
+  \cleardoublepage
   \tableofcontents
+  \thispagestyle{empty}
 
-  \clearpage
   \input{sammendrag}
   \input{ny}
   %\input{forretningsplan/forretningsplan}
